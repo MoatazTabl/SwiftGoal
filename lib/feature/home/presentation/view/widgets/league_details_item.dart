@@ -8,31 +8,36 @@ class LeagueDetailsItem extends StatelessWidget {
   String countryName;
 
   LeagueDetailsItem(
-      { required this.leagueLogo,
+      {super.key,  required this.leagueLogo,
       required this.leagueName,
       required this.countryLogo,
       required this.countryName});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image.asset(leagueLogo),
-        SizedBox(
-          width: 12.w,
-        ),
-        Text(leagueName),
-        SizedBox(
-          width: 8.w,
-        ),
-        Image.asset(countryLogo),
-        SizedBox(
-          width: 8.w,
-        ),
-        Text(countryName),
-        Spacer(),
-        Icon(Icons.arrow_right)
-      ],
+    return InkWell(
+      onTap: () {
+
+      },
+      child: Row(
+        children: [
+          Image.asset(leagueLogo),
+          SizedBox(
+            width: 12.w,
+          ),
+          Text(leagueName),
+          SizedBox(
+            width: 8.w,
+          ),
+          Image.asset(countryLogo),
+          SizedBox(
+            width: 8.w,
+          ),
+          Text(countryName),
+          Spacer(),
+          Icon(Icons.arrow_right)
+        ],
+      ),
     );
   }
 }
