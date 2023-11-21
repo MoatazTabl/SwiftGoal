@@ -8,6 +8,8 @@ class AppThemes {
   static const Color coral400=Color(0xffF87871);
   static const Color neutral400=Color(0xff9890A6);
   static  Color oNeutral400=const Color(0xff9890A6);
+  static  Color oBlack=const Color(0xFF262628);
+  static  Color oBlack6=const Color(0xFF323235);
   static  Color oWhite600=const Color(0xffFFFFFF).withOpacity(.48);
   static  Color oWhite300=const Color(0xffffffff).withOpacity(.16);
 

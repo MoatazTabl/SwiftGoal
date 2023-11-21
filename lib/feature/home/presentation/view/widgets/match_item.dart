@@ -30,15 +30,15 @@ class MatchItem extends StatelessWidget {
         height: 60.h,
         width: double.infinity,
         decoration: BoxDecoration(
-            color: Colors.white12, borderRadius: BorderRadius.circular(8)),
+            color: AppThemes.oBlack, borderRadius: BorderRadius.circular(8)),
         child: Row(
           children: [
             Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
+              decoration:  BoxDecoration(
+                  borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
-                  color: Color(0x4CFFFFFE)),
+                  color: AppThemes.oBlack6),
               width: 48.w,
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
