@@ -14,7 +14,7 @@ class MatchDetails extends StatelessWidget {
           children: [
             Container(
               color: const Color(0xff2F283B),
-              height: 165.h,
+              height: 130.h,
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -53,17 +53,47 @@ class MatchDetails extends StatelessWidget {
                 ],
               ),
             ),
-            DefaultTabController(
-              length: 3,
-              child: TabBar(
-                tabs: [Text("Overview"),
-                  Text("Lineups"),
-                  Text("Stats"),],
-              ),
-            ),
+             const MatchDetailTabBar(),
           ],
         ),
       ),
     );
+  }
+}
+
+class MatchDetailTabBar extends StatefulWidget {
+  const MatchDetailTabBar({
+    super.key,
+  });
+
+  @override
+  State<MatchDetailTabBar> createState() => _MatchDetailTabBarState();
+}
+
+class _MatchDetailTabBarState extends State<MatchDetailTabBar> {
+  int _index=0;
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+     length: 3,
+
+     child: TabBar(
+       onTap: (value) {
+         _index=0;
+         setState(() {
+           _index=value;
+         });
+       },
+       enableFeedback: true,
+       tabs: const [
+         Text(
+           "Overview",
+          ),
+
+         Text("Lineups"),
+         Text("Stats"),
+       ],
+     ),
+                );
   }
 }

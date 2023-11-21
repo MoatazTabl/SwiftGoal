@@ -5,13 +5,13 @@ import 'package:swift_goal/main_screen.dart';
 class AppRouter {
   static final GoRouter router = GoRouter(routes: [
     GoRoute(
-      path: "/",
+      path: "/sd",
       builder: (context, state) {
         return const MainScreen();
       },
     ),
   GoRoute(
-      path: "/match_details",
+      path: "/",
       builder: (context, state) {
         return const MatchDetails();
       },

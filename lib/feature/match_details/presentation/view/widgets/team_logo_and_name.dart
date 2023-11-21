@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/app_theme.dart';
 
 class TeamLogoAndName extends StatelessWidget {
   const TeamLogoAndName({
@@ -27,7 +26,6 @@ class TeamLogoAndName extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white),
         ),
 
-        IconButton(onPressed: (){}, icon: const Icon(Icons.star,size: 22),color: AppThemes.coral500,padding: EdgeInsets.zero,),
       ],
     );
   }
