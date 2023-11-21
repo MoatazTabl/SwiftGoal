@@ -8,7 +8,7 @@ class LeagueDetailsItem extends StatelessWidget {
   String countryName;
 
   LeagueDetailsItem(
-      {super.key, required this.leagueLogo,
+      { required this.leagueLogo,
       required this.leagueName,
       required this.countryLogo,
       required this.countryName});
