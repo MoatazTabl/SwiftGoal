@@ -3,41 +3,31 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_text_style.dart';
 
 class AppThemes {
-  static const Color mainOrangeColor = Color(0xfffa6f55);
-  static const Color mainTurquoiseColor = Color(0xff35C2C1);
-  static const Color mainIndigoColor = Color(0xff15141f);
-  static const Color mainWhiteColor = Color(0xfff4f9ff);
-  static Color frostedWhite = const Color(0xffDADADA).withOpacity(.3);
-  static Color frostedDark = const Color(0xff0F0F0F).withOpacity(.3);
+
+  static const Color mainDarkGrey=Color(0xff18181B);
+  static const Color coral400=Color(0xffF87871);
+  static const Color neutral400=Color(0xff9890A6);
+  static  Color oNeutral400=const Color(0xff9890A6);
+  static  Color oWhite600=const Color(0xffFFFFFF).withOpacity(.48);
+  static  Color oWhite300=const Color(0xffffffff).withOpacity(.16);
+
+
+
+  /// App Dark Theme
   static ThemeData darkTheme = ThemeData(
-    useMaterial3: true,
-    scaffoldBackgroundColor: mainIndigoColor,
+    scaffoldBackgroundColor: mainDarkGrey,
     brightness: Brightness.dark,
     textTheme: appTextThemeLight,
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: mainIndigoColor,
-      elevation: 0,
+    bottomNavigationBarTheme:  BottomNavigationBarThemeData(
+      backgroundColor: mainDarkGrey,
+
+      elevation: 10,
       type: BottomNavigationBarType.fixed,
-      selectedItemColor: mainOrangeColor,
-      unselectedItemColor: frostedWhite,
-    ),
-    tabBarTheme: TabBarTheme(
-      labelColor: mainOrangeColor,
-      labelStyle: appTextThemeLight.headlineMedium,
-      unselectedLabelColor: Colors.white,
-      indicator: const ShapeDecoration(
-        shape: UnderlineInputBorder(
-          borderSide: BorderSide(color: mainOrangeColor, width: 3),
-        ),
-      ),
-      indicatorSize: TabBarIndicatorSize.label,
-      unselectedLabelStyle:
-      appTextThemeLight.headlineMedium?.copyWith(fontSize: 16),
-      splashFactory: InkRipple.splashFactory,
-      dividerColor: Colors.transparent,
+      selectedItemColor: coral400,
+      unselectedItemColor: oWhite600,
     ),
     bottomSheetTheme: BottomSheetThemeData(
-      dragHandleColor: mainOrangeColor,
+      dragHandleColor: coral400,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
     ),
     switchTheme: const SwitchThemeData(
@@ -45,39 +35,5 @@ class AppThemes {
     ),
   );
 
-  static ThemeData lightTheme = ThemeData(
-    useMaterial3: true,
-    scaffoldBackgroundColor: mainWhiteColor,
-    brightness: Brightness.light,
-    textTheme: appTextThemeDark,
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: mainWhiteColor,
-      elevation: 0,
-      type: BottomNavigationBarType.shifting,
-      selectedItemColor: mainTurquoiseColor,
-      unselectedItemColor: frostedDark,
-    ),
-    tabBarTheme: TabBarTheme(
-      labelColor: mainOrangeColor,
-      labelStyle: appTextThemeDark.headlineMedium,
-      unselectedLabelColor: Colors.white,
-      indicator: const ShapeDecoration(
-        shape: UnderlineInputBorder(
-          borderSide: BorderSide(color: mainOrangeColor, width: 3),
-        ),
-      ),
-      indicatorSize: TabBarIndicatorSize.label,
-      unselectedLabelStyle:
-      appTextThemeDark.headlineMedium?.copyWith(fontSize: 16),
-      splashFactory: InkRipple.splashFactory,
-      dividerColor: Colors.transparent,
-    ),
-    bottomSheetTheme: BottomSheetThemeData(
-      dragHandleColor: mainOrangeColor,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.w)),
-    ),
-    switchTheme: const SwitchThemeData(
-      thumbColor: MaterialStatePropertyAll<Color>(Colors.black),
-    ),
-  );
+
 }
