@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'feature/home/presentaion/view/home_screen.dart';
+import 'feature/home/presentation/view/home_screen.dart';
 
-/// This is the main screen with bottom nav bar
 class MainScreen extends StatefulWidget {
+  /// This is the main screen with bottom nav bar
    const MainScreen({super.key});
 
   @override
@@ -12,7 +12,8 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
 
-  final List<Widget> bottomTabs = [
+  /// screens
+  final List<Widget> _bottomTabs = [
     const HomeScreen(),
     const HomeScreen(),
     const HomeScreen(),
@@ -26,14 +27,13 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: IndexedStack(
         index:tabIndex,
-        children: bottomTabs,
+        children: _bottomTabs,
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: tabIndex,
         onTap: (value) {
           setState(() {
             tabIndex=value;
-            print(tabIndex);
           });
         },
         items: const [BottomNavigationBarItem(icon: Icon(Icons.add),label: ""),
