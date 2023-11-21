@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/app_theme.dart';
 
@@ -24,7 +25,7 @@ class MatchItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-
+        GoRouter.of(context).push("/match_details");
       },
       child: Container(
         height: 60.h,
@@ -34,7 +35,7 @@ class MatchItem extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
@@ -81,7 +82,9 @@ class MatchItem extends StatelessWidget {
             const Spacer(),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.star,),
+              icon: const Icon(
+                Icons.star,
+              ),
               color: AppThemes.coral400,
             )
           ],
