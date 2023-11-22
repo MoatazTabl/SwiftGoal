@@ -60,8 +60,6 @@ class MatchDetails extends StatelessWidget {
               const MatchDetailTabBar(),
               const Expanded(
                 child: TabBarView(
-                
-                
                     children: [
                   OverViewTab(),
                  Icon(

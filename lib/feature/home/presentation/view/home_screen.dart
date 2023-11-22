@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:swift_goal/core/app_theme.dart';
+import 'package:swift_goal/feature/home/presentation/view/widgets/home_view_tab_bar.dart';
 import 'package:swift_goal/feature/home/presentation/view/widgets/league_matches.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -29,34 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(16)),
                     width: 240.w,
                     height: 28.h,
-                    child: const TabBar(
-                      labelStyle: TextStyle(fontSize: 14),
-                      indicatorSize: TabBarIndicatorSize.tab,
-                      enableFeedback: true,
-                      isScrollable: true,
-                      tabAlignment: TabAlignment.center,
-                      labelPadding: EdgeInsets.symmetric(horizontal: 10),
-                      indicator: ShapeDecoration(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(
-                              12,
-                            ),
-                          ),
-                        ),
-                        color: Colors.black,
-                      ),
-                      tabs: [
-                        Tab(
-                          text: 'All',
-                        ),
-                        Tab(
-                          text: 'LIVE',
-                        ),
-                        Tab(text: 'Upcoming'),
-                        Tab(text: 'Finished'),
-                      ],
-                    ),
+                    child: const HomeViewTabBar(),
                   ),
                   const Spacer(),
                   IconButton(
@@ -67,13 +41,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               Expanded(
-                child: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return const LeagueMatchesItem();
-                  },
-                  itemCount: 5,
-                ),
+                child: TabBarView(
+                    children: [
+                      ListView.builder(
+                        itemBuilder: (context, index) {
+                          return const LeagueMatchesItem();
+                        },
+                        itemCount: 5,
+                      ),
+                      const Icon(Icons.error_outline),
+                      const Icon(
+                        Icons.scale,
+                      ),
+                      const Icon(
+                        Icons.margin,
+                      ),
+                    ]),
               ),
+
             ],
           ),
         ),
