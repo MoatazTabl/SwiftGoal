@@ -23,6 +23,7 @@ class _MatchDetailTabBarState extends State<MatchDetailTabBar> {
             _index = value;
           });
         },
+
         enableFeedback: true,
         tabs: const [
           Text(

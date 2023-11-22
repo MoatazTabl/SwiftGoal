@@ -4,7 +4,7 @@ import 'package:swift_goal/core/app_theme.dart';
 import 'package:swift_goal/feature/home/presentation/view/widgets/league_matches.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -27,20 +27,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                         color: AppThemes.tabBarBackGround,
                         borderRadius: BorderRadius.circular(16)),
-                    width: 300.w,
-                    child: TabBar(
+                    width: 200.w,
+                    height: 30.h,
+                    child: const TabBar(
                       indicatorSize: TabBarIndicatorSize.tab,
-                      labelStyle: const TextTheme().bodySmall,
-                      labelPadding: const EdgeInsets.symmetric(horizontal: 0),
-                      labelColor: AppThemes.coral400,
-                      dividerColor: Colors.transparent,
-                      indicator: const ShapeDecoration(
+                      labelPadding: EdgeInsets.symmetric(horizontal: 0),
+                      indicator: ShapeDecoration(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(12)),
                         ),
                         color: Colors.black,
                       ),
-                      tabs: const [
+                      tabs: [
                         Tab(
                           text: 'All',
                         ),
@@ -77,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
     showDatePicker(
         context: context,
         firstDate: DateTime.now(),
-        lastDate: DateTime.now().add(Duration(days: 5)),
+        lastDate: DateTime.now().add(const Duration(days: 5)),
         initialDate: DateTime.now());
   }
 }
