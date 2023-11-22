@@ -27,9 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                         color: AppThemes.tabBarBackGround,
                         borderRadius: BorderRadius.circular(16)),
-                    width: 205.w,
+                    width: 240.w,
                     height: 28.h,
                     child: const TabBar(
+                      labelStyle: TextStyle(fontSize: 14),
                       indicatorSize: TabBarIndicatorSize.tab,
                       enableFeedback: true,
                       isScrollable: true,
@@ -47,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       tabs: [
                         Tab(
-                          text: 'Al',
+                          text: 'All',
                         ),
                         Tab(
                           text: 'LIVE',
