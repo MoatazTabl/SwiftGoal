@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'widgets/match_detail_tab_bar.dart';
 import 'widgets/match_detail_top_bar.dart';
 import 'widgets/team_logo_and_name.dart';
 
@@ -53,7 +54,7 @@ class MatchDetails extends StatelessWidget {
                 ],
               ),
             ),
-             const MatchDetailTabBar(),
+            const MatchDetailTabBar(),
           ],
         ),
       ),
@@ -61,39 +62,3 @@ class MatchDetails extends StatelessWidget {
   }
 }
 
-class MatchDetailTabBar extends StatefulWidget {
-  const MatchDetailTabBar({
-    super.key,
-  });
-
-  @override
-  State<MatchDetailTabBar> createState() => _MatchDetailTabBarState();
-}
-
-class _MatchDetailTabBarState extends State<MatchDetailTabBar> {
-  int _index=0;
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-     length: 3,
-
-     child: TabBar(
-       onTap: (value) {
-         _index=0;
-         setState(() {
-           _index=value;
-         });
-       },
-       enableFeedback: true,
-       tabs: const [
-         Text(
-           "Overview",
-          ),
-
-         Text("Lineups"),
-         Text("Stats"),
-       ],
-     ),
-                );
-  }
-}

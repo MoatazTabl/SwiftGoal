@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: ListView.builder(itemBuilder: (context, index) {
-        return LeagueMatchesItem();
+        return const LeagueMatchesItem();
       },itemCount: 5,),
     );
   }

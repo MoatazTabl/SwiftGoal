@@ -41,9 +41,14 @@ class MatchDetailsTopBar extends StatelessWidget {
         const Spacer(),
         IconButton(
           onPressed: () {},
+          isSelected: true,
           icon: Icon(
             Icons.star,
             color: AppThemes.oWhite300,
+          ),
+          selectedIcon: const Icon(
+            Icons.star,
+            color: AppThemes.coral400,
           ),
         ),
         IconButton(
