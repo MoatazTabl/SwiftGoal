@@ -7,7 +7,6 @@ class AppThemes {
   static const Color mainDarkGrey=Color(0xff18181B);
   static const Color coral500=Color(0xffE55A53);
   static const Color coral400=Color(0xffF87871);
-  static const Color tabBarBackGround=Color(0xFF393640);
   static const Color neutral400=Color(0xff9890A6);
   static  Color oNeutral400=const Color(0xff9890A6);
   static  Color oBlack=const Color(0xFF262628);

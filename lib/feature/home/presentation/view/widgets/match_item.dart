@@ -5,14 +5,14 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/app_theme.dart';
 
 class MatchItem extends StatelessWidget {
-  String teamLogo1;
-  String teamName1;
-  String teamResult1;
-  String teamLogo2;
-  String teamName2;
-  String teamResult2;
+  final String teamLogo1;
+ final String teamName1;
+  final String teamResult1;
+  final String teamLogo2;
+  final String teamName2;
+  final String teamResult2;
 
-  MatchItem(
+  const MatchItem(
       {super.key,
       required this.teamLogo1,
       required this.teamName1,

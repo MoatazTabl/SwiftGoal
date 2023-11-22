@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/app_theme.dart';
 
@@ -14,7 +15,9 @@ class MatchDetailsTopBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            context.pop();
+          },
           icon: const Icon(
             Icons.arrow_back_ios_new,
             color: AppThemes.neutral400,
@@ -38,9 +41,14 @@ class MatchDetailsTopBar extends StatelessWidget {
         const Spacer(),
         IconButton(
           onPressed: () {},
+          isSelected: true,
           icon: Icon(
             Icons.star,
             color: AppThemes.oWhite300,
+          ),
+          selectedIcon: const Icon(
+            Icons.star,
+            color: AppThemes.coral400,
           ),
         ),
         IconButton(

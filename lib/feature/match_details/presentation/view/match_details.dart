@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'widgets/match_detail_tab_bar.dart';
 import 'widgets/match_detail_top_bar.dart';
 import 'widgets/team_logo_and_name.dart';
 
@@ -14,7 +15,7 @@ class MatchDetails extends StatelessWidget {
           children: [
             Container(
               color: const Color(0xff2F283B),
-              height: 165.h,
+              height: 130.h,
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -53,17 +54,11 @@ class MatchDetails extends StatelessWidget {
                 ],
               ),
             ),
-            DefaultTabController(
-              length: 3,
-              child: TabBar(
-                tabs: [Text("Overview"),
-                  Text("Lineups"),
-                  Text("Stats"),],
-              ),
-            ),
+            const MatchDetailTabBar(),
           ],
         ),
       ),
     );
   }
 }
+

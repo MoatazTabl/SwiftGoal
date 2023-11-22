@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LeagueDetailsItem extends StatelessWidget {
-  String leagueLogo;
-  String leagueName;
-  String countryLogo;
-  String countryName;
+  final String leagueLogo;
+  final String leagueName;
+  final String countryLogo;
+  final String countryName;
 
-  LeagueDetailsItem(
+  const LeagueDetailsItem(
       {super.key,  required this.leagueLogo,
       required this.leagueName,
       required this.countryLogo,
@@ -34,8 +34,8 @@ class LeagueDetailsItem extends StatelessWidget {
             width: 8.w,
           ),
           Text(countryName),
-          Spacer(),
-          Icon(Icons.arrow_right)
+          const Spacer(),
+          const Icon(Icons.arrow_right)
         ],
       ),
     );

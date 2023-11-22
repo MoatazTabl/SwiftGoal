@@ -12,7 +12,7 @@ class LeagueMatchesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        LeagueDetailsItem(
+        const LeagueDetailsItem(
           leagueLogo: "assets/images/PremierLeague_logo_test.png",
           leagueName: "Premier League",
           countryLogo: "assets/images/country_icon_test.png",
@@ -21,7 +21,7 @@ class LeagueMatchesItem extends StatelessWidget {
         SizedBox(
           height: 8.h,
         ),
-        MatchItem(
+        const MatchItem(
             teamLogo1: "assets/images/liverpool_logo_test.png",
             teamName1: "Liverpool",
             teamResult1: "3",
@@ -29,7 +29,7 @@ class LeagueMatchesItem extends StatelessWidget {
             teamName2: "Astonvilla",
             teamResult2: "1"),
         SizedBox(height: 8.h,),
-        MatchItem(
+        const MatchItem(
             teamLogo1: "assets/images/liverpool_logo_test.png",
             teamName1: "Liverpool",
             teamResult1: "3",
@@ -37,7 +37,7 @@ class LeagueMatchesItem extends StatelessWidget {
             teamName2: "Astonvilla",
             teamResult2: "1"),
         SizedBox(height: 8.h,),
-        MatchItem(
+        const MatchItem(
             teamLogo1: "assets/images/liverpool_logo_test.png",
             teamName1: "Liverpool",
             teamResult1: "3",
@@ -45,7 +45,7 @@ class LeagueMatchesItem extends StatelessWidget {
             teamName2: "Astonvilla",
             teamResult2: "1"),
         SizedBox(height: 8.h,),
-        MatchItem(
+        const MatchItem(
             teamLogo1: "assets/images/liverpool_logo_test.png",
             teamName1: "Liverpool",
             teamResult1: "3",
