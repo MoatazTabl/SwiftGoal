@@ -35,6 +35,7 @@ class AppThemes {
         unselectedLabelColor: const Color(0xffffffff).withOpacity(.48),
         indicatorColor: AppThemes.coral400,
         labelStyle: const TextStyle(color: AppThemes.coral400,fontWeight: FontWeight.w900,fontSize: 16),
+
         splashFactory: NoSplash.splashFactory
 
     ),

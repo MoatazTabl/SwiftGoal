@@ -27,14 +27,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     decoration: BoxDecoration(
                         color: AppThemes.tabBarBackGround,
                         borderRadius: BorderRadius.circular(16)),
-                    width: 200.w,
-                    height: 30.h,
+                    width: 205.w,
+                    height: 28.h,
                     child: const TabBar(
                       indicatorSize: TabBarIndicatorSize.tab,
-                      labelPadding: EdgeInsets.symmetric(horizontal: 0),
+                      enableFeedback: true,
+                      isScrollable: true,
+                      tabAlignment: TabAlignment.center,
+                      labelPadding: EdgeInsets.symmetric(horizontal: 10),
                       indicator: ShapeDecoration(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              12,
+                            ),
+                          ),
                         ),
                         color: Colors.black,
                       ),
@@ -42,7 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         Tab(
                           text: 'All',
                         ),
-                        Tab(text: 'LIVE'),
+                        Tab(
+                          text: 'LIVE',
+                        ),
                         Tab(text: 'Upcoming'),
                         Tab(text: 'Finished'),
                       ],
