@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/images/home_icon.png"),
+              AssetImage("assets/images/icons/home_icon.png"),
             ),
             label: "Matches",
           ),
