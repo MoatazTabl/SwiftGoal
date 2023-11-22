@@ -42,6 +42,7 @@ class MatchDetailsTopBar extends StatelessWidget {
         IconButton(
           onPressed: () {},
           isSelected: true,
+          padding: EdgeInsets.zero,
           icon: Icon(
             Icons.star,
             color: AppThemes.oWhite300,
@@ -55,6 +56,7 @@ class MatchDetailsTopBar extends StatelessWidget {
           onPressed: () {},
           icon: const Icon(Icons.share),
           color: AppThemes.oNeutral400,
+          padding: EdgeInsets.zero,
         ),
       ],
     );
