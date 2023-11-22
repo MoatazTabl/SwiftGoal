@@ -40,7 +40,7 @@ class MatchItem extends StatelessWidget {
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
                   color: AppThemes.oBlack6),
-              width: 48.w,
+              width: 45.w,
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [Text("4'"), Text("FT")],
@@ -49,7 +49,7 @@ class MatchItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
               child: SizedBox(
-                width: 264.w,
+                width: 255.w,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -81,6 +81,7 @@ class MatchItem extends StatelessWidget {
             ),
             const Spacer(),
             IconButton(
+              iconSize: 20,
               onPressed: () {},
               icon: const Icon(
                 Icons.star,

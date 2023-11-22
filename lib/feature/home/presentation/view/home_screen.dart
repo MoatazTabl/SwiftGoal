@@ -3,9 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:swift_goal/core/app_theme.dart';
 import 'package:swift_goal/feature/home/presentation/view/widgets/league_matches.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,7 +18,7 @@ class HomeScreen extends StatelessWidget {
       child: DefaultTabController(
         length: 4, // Number of tabs
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: Column(
             children: [
               Row(
@@ -22,15 +27,20 @@ class HomeScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: AppThemes.tabBarBackGround,
                         borderRadius: BorderRadius.circular(16)),
-                    width: 260.w,
+                    width: 300.w,
                     child: TabBar(
-                      labelStyle: TextTheme().bodySmall,
-                      labelPadding: EdgeInsets.symmetric(horizontal: 0),
-                      labelColor:AppThemes.coral400 ,
-                      indicator: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(12)),
-                      tabs: [
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      labelStyle: const TextTheme().bodySmall,
+                      labelPadding: const EdgeInsets.symmetric(horizontal: 0),
+                      labelColor: AppThemes.coral400,
+                      dividerColor: Colors.transparent,
+                      indicator: const ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                        ),
+                        color: Colors.black,
+                      ),
+                      tabs: const [
                         Tab(
                           text: 'All',
                         ),
@@ -40,17 +50,18 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Spacer(),
-                  IconButton(onPressed: () {
-
-                  }, icon: Icon(Icons.calendar_today))
+                  const Spacer(),
+                  IconButton(
+                      onPressed: () {
+                        chooseDate(context);
+                      },
+                      icon: const Icon(Icons.calendar_month))
                 ],
               ),
-              Divider(color: AppThemes.oNeutral400),
               Expanded(
                 child: ListView.builder(
                   itemBuilder: (context, index) {
-                    return LeagueMatchesItem();
+                    return const LeagueMatchesItem();
                   },
                   itemCount: 5,
                 ),
@@ -60,5 +71,13 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void chooseDate(BuildContext context) {
+    showDatePicker(
+        context: context,
+        firstDate: DateTime.now(),
+        lastDate: DateTime.now().add(Duration(days: 5)),
+        initialDate: DateTime.now());
   }
 }
