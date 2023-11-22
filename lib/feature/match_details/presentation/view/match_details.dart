@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:swift_goal/feature/match_details/presentation/view/widgets/lineups_tab.dart';
 import 'package:swift_goal/feature/match_details/presentation/view/widgets/overview_tab.dart';
 import 'widgets/match_detail_tab_bar.dart';
 import 'widgets/match_detail_top_bar.dart';
@@ -62,9 +63,7 @@ class MatchDetails extends StatelessWidget {
                 child: TabBarView(
                     children: [
                   OverViewTab(),
-                 Icon(
-                    Icons.scale,
-                  ),
+                 LineUpsTab(),
                  Icon(
                     Icons.margin,
                   ),
