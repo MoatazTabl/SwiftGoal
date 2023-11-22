@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       tabs: [
                         Tab(
-                          text: 'Al',
+                          text: 'All',
                         ),
                         Tab(
                           text: 'LIVE',
@@ -57,7 +57,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  //test
                   const Spacer(),
                   IconButton(
                       onPressed: () {

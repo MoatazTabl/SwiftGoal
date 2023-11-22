@@ -14,25 +14,23 @@ class _MatchDetailTabBarState extends State<MatchDetailTabBar> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: TabBar(
-        onTap: (value) {
-          _index = 0;
-          setState(() {
-            _index = value;
-          });
-        },
+    return TabBar(
+      onTap: (value) {
+        _index = 0;
+        setState(() {
+          _index = value;
+        });
+      },
 
-        enableFeedback: true,
-        tabs: const [
-          Text(
-            "Overview",
-          ),
-          Text("Lineups"),
-          Text("Stats"),
-        ],
-      ),
+      enableFeedback: true,
+      tabs: const [
+        Text(
+          "Overview",
+        ),
+        Text("Lineups"),
+        Text("Stats"),
+      ],
+
     );
   }
 }
