@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/app_theme.dart';
-import 'match_event.dart';
-import 'match_half_announcement.dart';
+import '../widgets/match_event.dart';
+import '../widgets/match_half_announcement.dart';
 
 class OverViewTab extends StatelessWidget {
   const OverViewTab({super.key});

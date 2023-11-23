@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_text_style.dart';
 
 class AppThemes {
@@ -87,17 +86,6 @@ class AppThemes {
           Colors.white,
         ),
       ),
-    ),
-    bottomSheetTheme: BottomSheetThemeData(
-      dragHandleColor: coral400,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          20.w,
-        ),
-      ),
-    ),
-    switchTheme: const SwitchThemeData(
-      thumbColor: MaterialStatePropertyAll<Color>(Colors.white),
     ),
   );
 }

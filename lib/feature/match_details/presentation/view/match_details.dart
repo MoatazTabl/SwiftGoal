@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:swift_goal/feature/match_details/presentation/view/widgets/lineups_tab.dart';
-import 'package:swift_goal/feature/match_details/presentation/view/widgets/overview_tab.dart';
+import 'package:swift_goal/feature/match_details/presentation/view/tabs/lineups_tab.dart';
+import 'package:swift_goal/feature/match_details/presentation/view/tabs/overview_tab.dart';
+import 'package:swift_goal/feature/match_details/presentation/view/tabs/stats_tab.dart';
 import 'widgets/match_detail_tab_bar.dart';
 import 'widgets/match_detail_top_bar.dart';
 import 'widgets/team_logo_and_name.dart';
@@ -64,9 +65,7 @@ class MatchDetails extends StatelessWidget {
                     children: [
                   OverViewTab(),
                  LineUpsTab(),
-                 Icon(
-                    Icons.margin,
-                  ),
+                 StatsTab(),
                 ]),
               )
             ],
