@@ -64,9 +64,10 @@ class TeamOnePlayer extends StatelessWidget {
               ],
             )
           : Container(),
-      substitution? Positioned(
+      substitution? const Positioned(
         left: 40,
-        child: const ImageIcon(
+        child: ImageIcon(
+          color: Colors.green,
           size: 25,
           AssetImage(
               "assets/images/match_details_icons/subsection_icon.png"),

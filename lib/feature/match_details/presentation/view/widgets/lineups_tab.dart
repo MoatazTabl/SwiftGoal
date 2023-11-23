@@ -68,8 +68,8 @@ class LineUpsTab extends StatelessWidget {
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                TeamTwoPlayer(yellowCard: true),
-                TeamTwoPlayer(),
+                TeamTwoPlayer(yellowCard: true,substitution: true),
+                TeamTwoPlayer(substitution: true),
                 TeamTwoPlayer(),
                 TeamTwoPlayer(),
               ],

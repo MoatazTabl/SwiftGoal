@@ -5,9 +5,13 @@ class TeamTwoPlayer extends StatelessWidget {
   final bool yellowCard;
 
   final bool redCard;
+  final bool substitution;
 
   const TeamTwoPlayer(
-      {super.key, this.yellowCard = false, this.redCard = false});
+      {super.key,
+      this.yellowCard = false,
+      this.redCard = false,
+      this.substitution = false});
 
   @override
   Widget build(BuildContext context) {
@@ -33,31 +37,40 @@ class TeamTwoPlayer extends StatelessWidget {
         ),
         yellowCard ^ redCard
             ? ImageIcon(
-          size: 15,
-          AssetImage(yellowCard
-              ? "assets/images/match_details_icons/yellow_card_icon.png"
-              : "assets/images/match_details_icons/red_card_icon.png"),
-          color: yellowCard ? Colors.yellow : Colors.red,
-        )
+                size: 15,
+                AssetImage(yellowCard
+                    ? "assets/images/match_details_icons/yellow_card_icon.png"
+                    : "assets/images/match_details_icons/red_card_icon.png"),
+                color: yellowCard ? Colors.yellow : Colors.red,
+              )
             : Container(),
         yellowCard & redCard
             ? const Row(
-          children: [
-            ImageIcon(
-              size: 15,
-              AssetImage(
-                  "assets/images/match_details_icons/yellow_card_icon.png"),
-              color: Colors.yellow,
-            ),
-            ImageIcon(
-              size: 15,
-              AssetImage(
-                  "assets/images/match_details_icons/red_card_icon.png"),
-              color: Colors.red,
-            ),
-          ],
-        )
+                children: [
+                  ImageIcon(
+                    size: 15,
+                    AssetImage(
+                        "assets/images/match_details_icons/yellow_card_icon.png"),
+                    color: Colors.yellow,
+                  ),
+                  ImageIcon(
+                    size: 15,
+                    AssetImage(
+                        "assets/images/match_details_icons/red_card_icon.png"),
+                    color: Colors.red,
+                  ),
+                ],
+              )
             : Container(),
+        substitution? const Positioned(
+          left: 40,
+          child: ImageIcon(
+            color: Colors.green,
+            size: 25,
+            AssetImage(
+                "assets/images/match_details_icons/subsection_icon.png"),
+          ),
+        ) : Container(),
       ],
     );
   }
