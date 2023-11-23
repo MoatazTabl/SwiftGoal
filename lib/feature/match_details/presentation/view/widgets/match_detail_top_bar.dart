@@ -24,7 +24,7 @@ class MatchDetailsTopBar extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: .215.sw,
+          width: .120.sw,
         ),
         Column(
           children: [
