@@ -41,24 +41,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               Expanded(
-                child: TabBarView(
-                    children: [
-                      ListView.builder(
-                        itemBuilder: (context, index) {
-                          return const LeagueMatchesItem();
-                        },
-                        itemCount: 5,
-                      ),
-                      const Icon(Icons.error_outline),
-                      const Icon(
-                        Icons.scale,
-                      ),
-                      const Icon(
-                        Icons.margin,
-                      ),
-                    ]),
+                child: TabBarView(children: [
+                  ListView.builder(
+                    itemBuilder: (context, index) {
+                      return const LeagueMatchesItem();
+                    },
+                    itemCount: 5,
+                  ),
+                  const Icon(Icons.error_outline),
+                  const Icon(
+                    Icons.scale,
+                  ),
+                  const Icon(
+                    Icons.margin,
+                  ),
+                ]),
               ),
-
             ],
           ),
         ),
@@ -68,9 +66,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void chooseDate(BuildContext context) {
     showDatePicker(
-        context: context,
-        firstDate: DateTime.now(),
-        lastDate: DateTime.now().add(const Duration(days: 5)),
-        initialDate: DateTime.now());
+      context: context,
+      builder: (context, child) {
+        return Theme(
+            data: Theme.of(context),
+            child: child!);
+      },
+      firstDate: DateTime.now(),
+      lastDate: DateTime.now().add(const Duration(days: 5)),
+      initialDate: DateTime.now(),
+      initialEntryMode: DatePickerEntryMode.calendarOnly,
+    );
   }
 }
