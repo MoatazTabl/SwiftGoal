@@ -15,7 +15,7 @@ class LineUpsTab extends StatelessWidget {
           width: double.infinity,
           fit: BoxFit.fill,
         ),
-         Column(
+        Column(
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 12),
@@ -30,9 +30,9 @@ class LineUpsTab extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TeamOnePlayer(),
+                TeamOnePlayer(yellowCard: true),
                 TeamOnePlayer(),
-                TeamOnePlayer(),
-                TeamOnePlayer(),
+                TeamOnePlayer(yellowCard: true),
               ],
             ),
             const Padding(
@@ -41,7 +41,7 @@ class LineUpsTab extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TeamOnePlayer(),
-                  TeamOnePlayer(),
+                  TeamOnePlayer(redCard: true),
                   TeamOnePlayer(),
                 ],
               ),
@@ -51,13 +51,25 @@ class LineUpsTab extends StatelessWidget {
               children: [
                 TeamOnePlayer(),
                 TeamOnePlayer(),
-                TeamOnePlayer(),
+                TeamOnePlayer(yellowCard: true),
               ],
             ),
-            SizedBox(height: 15.h,),
+            SizedBox(
+              height: 15.h,
+            ),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                TeamTwoPlayer(),
+                TeamTwoPlayer(yellowCard: true),
+              ],
+            ),
+            const Spacer(),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TeamTwoPlayer(yellowCard: true),
+                TeamTwoPlayer(),
                 TeamTwoPlayer(),
                 TeamTwoPlayer(),
               ],
@@ -67,23 +79,18 @@ class LineUpsTab extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TeamTwoPlayer(),
+                TeamTwoPlayer(redCard: true),
                 TeamTwoPlayer(),
-                TeamTwoPlayer(),
-                TeamTwoPlayer(),
+                TeamTwoPlayer(yellowCard: true),
               ],
             ),
             const Spacer(),
             const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TeamTwoPlayer(),
-                TeamTwoPlayer(),
-                TeamTwoPlayer(),
-                TeamTwoPlayer(),
               ],
-            ),
-            const Spacer(),
-            const TeamTwoPlayer()
+            )
           ],
         ),
       ],
