@@ -6,17 +6,21 @@ class TeamTwoPlayer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      height: 60.h,
+    return Container(
+      height: 70.h,
       child: Column(
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.blue, borderRadius:BorderRadius.circular(50)),
-            width: 30,
-            height: 30,
-            child: Center(child: Text("10")),
+            decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage("assets/images/messi.jpg"),
+                    fit: BoxFit.fill),
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(50)),
+            width: 40,
+            height: 40,
           ),
-          Text("Messi"),
+          const Text("Messi"),
         ],
       ),
     );

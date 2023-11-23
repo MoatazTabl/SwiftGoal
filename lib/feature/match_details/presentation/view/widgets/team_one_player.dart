@@ -8,16 +8,15 @@ class TeamOnePlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 60.h,
+      height: 70.h,
       child: Column(
         children: [
           Container(
-            decoration: BoxDecoration(color: AppThemes.coral500, borderRadius:BorderRadius.circular(50)),
-            width: 30,
-            height: 30,
-            child: Center(child: Text("7")),
+            decoration: BoxDecoration(image: const DecorationImage(image: AssetImage("assets/images/ronaldo.webp",),fit: BoxFit.fill),color: AppThemes.coral500, borderRadius:BorderRadius.circular(50)),
+            width: 40,
+            height: 40,
           ),
-          Text("Ronaldo"),
+          const Text("Ronaldo"),
         ],
       ),
     );

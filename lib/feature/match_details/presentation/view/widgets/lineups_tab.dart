@@ -46,18 +46,15 @@ class LineUpsTab extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TeamOnePlayer(),
-                  TeamOnePlayer(),
-                  TeamOnePlayer(),
-                ],
-              ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TeamOnePlayer(),
+                TeamOnePlayer(),
+                TeamOnePlayer(),
+              ],
             ),
-            SizedBox(height: 30.h,),
+            SizedBox(height: 15.h,),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
