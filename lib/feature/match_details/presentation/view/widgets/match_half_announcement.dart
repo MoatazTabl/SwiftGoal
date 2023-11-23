@@ -3,8 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MatchHalfAnnouncement extends StatelessWidget {
   const MatchHalfAnnouncement({
-    super.key,
+    super.key, required this.score, required this.detail,
   });
+
+  final String score;
+  final String detail;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class MatchHalfAnnouncement extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            "FT 2-0",
+            "$detail $score",
             style: Theme.of(context).textTheme.headlineLarge,
             textAlign: TextAlign.center,
           ),

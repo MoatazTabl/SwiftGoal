@@ -10,6 +10,7 @@ class MatchDetailTabBar extends StatefulWidget {
 }
 
 class _MatchDetailTabBarState extends State<MatchDetailTabBar> {
+  // ignore: unused_field
   int _index = 0;
 
   @override
