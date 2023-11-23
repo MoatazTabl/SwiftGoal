@@ -6,9 +6,13 @@ class TeamOnePlayer extends StatelessWidget {
   final bool yellowCard;
 
   final bool redCard;
+  final bool substitution;
 
   const TeamOnePlayer(
-      {super.key, this.yellowCard = false, this.redCard = false});
+      {super.key,
+      this.yellowCard = false,
+      this.redCard = false,
+      this.substitution = false});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +37,7 @@ class TeamOnePlayer extends StatelessWidget {
           ],
         ),
       ),
-      yellowCard | redCard
+      yellowCard ^ redCard
           ? ImageIcon(
               size: 15,
               AssetImage(yellowCard
@@ -42,6 +46,32 @@ class TeamOnePlayer extends StatelessWidget {
               color: yellowCard ? Colors.yellow : Colors.red,
             )
           : Container(),
+      yellowCard & redCard
+          ? const Row(
+              children: [
+                ImageIcon(
+                  size: 15,
+                  AssetImage(
+                      "assets/images/match_details_icons/yellow_card_icon.png"),
+                  color: Colors.yellow,
+                ),
+                ImageIcon(
+                  size: 15,
+                  AssetImage(
+                      "assets/images/match_details_icons/red_card_icon.png"),
+                  color: Colors.red,
+                ),
+              ],
+            )
+          : Container(),
+      substitution? Positioned(
+        left: 40,
+        child: const ImageIcon(
+          size: 25,
+          AssetImage(
+              "assets/images/match_details_icons/subsection_icon.png"),
+        ),
+      ) : Container(),
     ]);
   }
 }

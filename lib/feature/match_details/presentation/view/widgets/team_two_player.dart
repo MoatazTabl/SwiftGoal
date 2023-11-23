@@ -31,14 +31,32 @@ class TeamTwoPlayer extends StatelessWidget {
             ],
           ),
         ),
-        yellowCard | redCard
+        yellowCard ^ redCard
             ? ImageIcon(
-                size: 15,
-                AssetImage(yellowCard
-                    ? "assets/images/match_details_icons/yellow_card_icon.png"
-                    : "assets/images/match_details_icons/red_card_icon.png"),
-                color: yellowCard ? Colors.yellow : Colors.red,
-              )
+          size: 15,
+          AssetImage(yellowCard
+              ? "assets/images/match_details_icons/yellow_card_icon.png"
+              : "assets/images/match_details_icons/red_card_icon.png"),
+          color: yellowCard ? Colors.yellow : Colors.red,
+        )
+            : Container(),
+        yellowCard & redCard
+            ? const Row(
+          children: [
+            ImageIcon(
+              size: 15,
+              AssetImage(
+                  "assets/images/match_details_icons/yellow_card_icon.png"),
+              color: Colors.yellow,
+            ),
+            ImageIcon(
+              size: 15,
+              AssetImage(
+                  "assets/images/match_details_icons/red_card_icon.png"),
+              color: Colors.red,
+            ),
+          ],
+        )
             : Container(),
       ],
     );
