@@ -14,17 +14,17 @@ class SearchTab extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(right: 15),
-                child: CircleAvatar(
-                  radius: 17,
-                  backgroundColor: Colors.transparent,
-                  backgroundImage:
-                      AssetImage("assets/images/icons/football-icon-png.png"),
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Image(
+                  height: 24.h,
+                  width: 16.w,
+                  image:
+                      const AssetImage("assets/images/icons/football-icon.png"),
                 ),
               ),
               SizedBox(
-                height: 45.h,
+                height: 28.h,
                 width: 300.w,
                 child: const CustomSearchTextField(),
               ),
