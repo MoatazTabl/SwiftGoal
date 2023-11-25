@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swift_goal/feature/search/presentation/view/search_tab.dart';
 
 import 'feature/home/presentation/view/home_screen.dart';
 
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _bottomTabs = [
     const HomeScreen(),
     const HomeScreen(),
-    const HomeScreen(),
+    const SearchTab(),
     const HomeScreen()
   ];
 
