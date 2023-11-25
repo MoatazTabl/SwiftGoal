@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:swift_goal/feature/search/presentation/view/widgets/custom_search_text_field.dart';
 
 class SearchTab extends StatelessWidget {
   const SearchTab({Key? key}) : super(key: key);
@@ -24,27 +25,7 @@ class SearchTab extends StatelessWidget {
               SizedBox(
                 height: 45.h,
                 width: 300.w,
-                child: TextField(
-                  onSubmitted: (value) {},
-                  onChanged: (value) {},
-                  decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.only(top: 20),
-                    prefixIcon: const Icon(Icons.search_outlined),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(50),
-                      borderSide: const BorderSide(color: Colors.white),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    hintText: "Type to search",
-                    suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.highlight_remove),
-                    ),
-                  ),
-                ),
+                child: const CustomSearchTextField(),
               ),
             ],
           ),
