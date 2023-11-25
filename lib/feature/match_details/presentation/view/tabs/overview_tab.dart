@@ -12,6 +12,7 @@ class OverViewTab extends StatelessWidget {
     return Container(
       color: AppThemes.oBlack,
       child: const SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -61,6 +62,34 @@ class OverViewTab extends StatelessWidget {
               event1: 'Own Goal!',
               event2: "Alaa Emad", crossAxisAlignment: CrossAxisAlignment.start,
             ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
+          MatchHalfAnnouncement(detail: 'HF',score: '2-1', ),
+            MatchEvent(
+              iconImg: 'assets/images/match_details_icons/own_goal_icon.png',
+              matchMin: '60',
+              event1: 'Own Goal!',
+              event2: "Alaa Emad", crossAxisAlignment: CrossAxisAlignment.start,
+            ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
+          MatchHalfAnnouncement(detail: 'HF',score: '2-1', ),
+            MatchEvent(
+              iconImg: 'assets/images/match_details_icons/own_goal_icon.png',
+              matchMin: '60',
+              event1: 'Own Goal!',
+              event2: "Alaa Emad", crossAxisAlignment: CrossAxisAlignment.start,
+            ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
+           MatchHalfAnnouncement(detail: 'HF',score: '2-1', ),
+            MatchEvent(
+              iconImg: 'assets/images/match_details_icons/own_goal_icon.png',
+              matchMin: '60',
+              event1: 'Own Goal!',
+              event2: "Alaa Emad", crossAxisAlignment: CrossAxisAlignment.start,
+            ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
+            MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
             MatchHalfAnnouncement(detail: 'Start',score: '2-1', ),
           ],
         ),

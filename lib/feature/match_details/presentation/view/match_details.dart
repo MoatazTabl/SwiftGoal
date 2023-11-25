@@ -3,72 +3,50 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:swift_goal/feature/match_details/presentation/view/tabs/lineups_tab.dart';
 import 'package:swift_goal/feature/match_details/presentation/view/tabs/overview_tab.dart';
 import 'package:swift_goal/feature/match_details/presentation/view/tabs/stats_tab.dart';
-import 'widgets/match_detail_tab_bar.dart';
-import 'widgets/match_detail_top_bar.dart';
-import 'widgets/team_logo_and_name.dart';
+import 'widgets/custom_page_header.dart';
+import 'widgets/match_detail_tab_bar_sliver.dart';
 
-class MatchDetails extends StatelessWidget {
+class MatchDetails extends StatefulWidget {
   const MatchDetails({super.key});
 
+  @override
+  State<MatchDetails> createState() => _MatchDetailsState();
+}
+
+class _MatchDetailsState extends State<MatchDetails> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: DefaultTabController(
           length: 3,
-          child: Column(
-            children: [
-              Container(
-                color: const Color(0xff2F283B),
-                height: 130.h,
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const MatchDetailsTopBar(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const TeamLogoAndName(),
-                        Column(
-                          children: [
-                            Text(
-                              "Full Time",
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
-                            SizedBox(
-                              height: 2.h,
-                            ),
-                            Text(
-                              "3-0",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineLarge!
-                                  .copyWith(fontWeight: FontWeight.w900),
-                            ),
-                            Text(
-                              "HT 2-0",
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
-                          ],
-                        ),
-                        const TeamLogoAndName(),
-                      ],
-                    ),
-                  ],
+          child: NotificationListener<ScrollUpdateNotification>(
+            onNotification: (notification) {
+              return true;
+            },
+            child: CustomScrollView(
+              slivers: [
+                SliverPersistentHeader(
+                  pinned: true,
+                  floating: false,
+                  delegate: CustomPageHeader(
+                      collapsedHeight: 46.h,
+                      expandedHeight: 141.h,
+                      teamOneName: 'LiverPool',
+                      teamTwoName: 'AstonVilla',
+                      teamTwoLogo: "assets/images/img.png",
+                      teamOneLogo: "assets/images/Manchester_City_FC_logo.png"),
                 ),
-              ),
-              const MatchDetailTabBar(),
-              const Expanded(
-                child: TabBarView(
-                    children: [
-                  OverViewTab(),
-                 LineUpsTab(),
-                 StatsTab(),
-                ]),
-              )
-            ],
+               SliverPersistentHeader(delegate: MatchDetailTabBarSliver(),pinned: true,floating: false,),
+                const SliverFillRemaining(
+                  child: TabBarView(children: [
+                    OverViewTab(),
+                    LineUpsTab(),
+                    StatsTab(),
+                  ]),
+                )
+              ],
+            ),
           ),
         ),
       ),
