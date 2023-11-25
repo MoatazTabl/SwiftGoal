@@ -47,32 +47,27 @@ class TeamOnePlayer extends StatelessWidget {
             )
           : Container(),
       yellowCard & redCard
-          ? const Row(
-              children: [
-                ImageIcon(
-                  size: 15,
-                  AssetImage(
-                      "assets/images/match_details_icons/yellow_card_icon.png"),
-                  color: Colors.yellow,
-                ),
-                ImageIcon(
-                  size: 15,
-                  AssetImage(
-                      "assets/images/match_details_icons/red_card_icon.png"),
-                  color: Colors.red,
-                ),
-              ],
+          ? Positioned(
+              left: 0,
+              child: SizedBox(
+                height: 20.h,
+                width: 20.h,
+                child: Image.asset(
+                    "assets/images/match_details_icons/yellow_and_red_card_icon.png"),
+              ),
             )
           : Container(),
-      substitution? const Positioned(
-        left: 40,
-        child: ImageIcon(
-          color: Colors.green,
-          size: 25,
-          AssetImage(
-              "assets/images/match_details_icons/subsection_icon.png"),
-        ),
-      ) : Container(),
+      substitution
+          ? const Positioned(
+              left: 40,
+              child: Image(
+                height: 20,
+                width: 20,
+                image: AssetImage(
+                    "assets/images/match_details_icons/subsection_icon.png"),
+              ),
+            )
+          : Container(),
     ]);
   }
 }

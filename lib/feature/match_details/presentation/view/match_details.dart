@@ -37,7 +37,11 @@ class _MatchDetailsState extends State<MatchDetails> {
                       teamTwoLogo: "assets/images/img.png",
                       teamOneLogo: "assets/images/Manchester_City_FC_logo.png"),
                 ),
-               SliverPersistentHeader(delegate: MatchDetailTabBarSliver(),pinned: true,floating: false,),
+                SliverPersistentHeader(
+                  delegate: MatchDetailTabBarSliver(),
+                  pinned: true,
+                  floating: false,
+                ),
                 const SliverFillRemaining(
                   child: TabBarView(children: [
                     OverViewTab(),
