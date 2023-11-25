@@ -17,6 +17,7 @@ class SearchTab extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(right: 15),
                 child: CircleAvatar(
+                  radius: 17,
                   backgroundColor: Colors.transparent,
                   backgroundImage:
                       AssetImage("assets/images/icons/football-icon-png.png"),
