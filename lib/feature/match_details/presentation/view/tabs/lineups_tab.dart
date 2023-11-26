@@ -8,92 +8,98 @@ class LineUpsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          "assets/images/Lineups.png",
-          width: double.infinity,
-          fit: BoxFit.fill,
-        ),
-        Column(
+    return SingleChildScrollView(
+      physics: const NeverScrollableScrollPhysics(),
+      child: Container(
+        height: 671.h,
+        child: Stack(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TeamOnePlayer(),
-                ],
-              ),
+            Image.asset(
+              "assets/images/Lineups.png",
+              width: double.infinity,
+              fit: BoxFit.fill,
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            Column(
               children: [
-                TeamOnePlayer(),
-                TeamOnePlayer(yellowCard: true,redCard: true),
-                TeamOnePlayer(),
-                TeamOnePlayer(yellowCard: true),
+                const Padding(
+                  padding: EdgeInsets.only(top: 12),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TeamOnePlayer(),
+                    ],
+                  ),
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TeamOnePlayer(),
+                    TeamOnePlayer(yellowCard: true,redCard: true),
+                    TeamOnePlayer(),
+                    TeamOnePlayer(yellowCard: true),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 25),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TeamOnePlayer(substitution: true),
+                      TeamOnePlayer(redCard: true),
+                      TeamOnePlayer(),
+                    ],
+                  ),
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TeamOnePlayer(),
+                    TeamOnePlayer(),
+                    TeamOnePlayer(yellowCard: true),
+                  ],
+                ),
+                SizedBox(
+                  height: 15.h,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TeamTwoPlayer(),
+                    TeamTwoPlayer(yellowCard: true),
+                  ],
+                ),
+                const Spacer(),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TeamTwoPlayer(yellowCard: true,substitution: true),
+                    TeamTwoPlayer(substitution: true),
+                    TeamTwoPlayer(),
+                    TeamTwoPlayer(),
+                  ],
+                ),
+                const Spacer(),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TeamTwoPlayer(),
+                    TeamTwoPlayer(redCard: true),
+                    TeamTwoPlayer(),
+                    TeamTwoPlayer(yellowCard: true,redCard: true),
+                  ],
+                ),
+                const Spacer(),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TeamTwoPlayer(),
+                  ],
+                )
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TeamOnePlayer(substitution: true),
-                  TeamOnePlayer(redCard: true),
-                  TeamOnePlayer(),
-                ],
-              ),
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TeamOnePlayer(),
-                TeamOnePlayer(),
-                TeamOnePlayer(yellowCard: true),
-              ],
-            ),
-            SizedBox(
-              height: 15.h,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TeamTwoPlayer(),
-                TeamTwoPlayer(yellowCard: true),
-              ],
-            ),
-            const Spacer(),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TeamTwoPlayer(yellowCard: true,substitution: true),
-                TeamTwoPlayer(substitution: true),
-                TeamTwoPlayer(),
-                TeamTwoPlayer(),
-              ],
-            ),
-            const Spacer(),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TeamTwoPlayer(),
-                TeamTwoPlayer(redCard: true),
-                TeamTwoPlayer(),
-                TeamTwoPlayer(yellowCard: true,redCard: true),
-              ],
-            ),
-            const Spacer(),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TeamTwoPlayer(),
-              ],
-            )
           ],
         ),
-      ],
+      ),
     );
   }
 }
