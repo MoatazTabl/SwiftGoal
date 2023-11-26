@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/custom_search_text_field.dart';
-import 'package:swift_goal/feature/search/presentation/view/widgets/search_tab_bar.dart';
-import 'package:swift_goal/feature/search/presentation/view/widgets/search_tabs/leagues_tap.dart';
-import 'package:swift_goal/feature/search/presentation/view/widgets/search_tabs/matches_tab.dart';
-import 'package:swift_goal/feature/search/presentation/view/widgets/search_tabs/teams_tap.dart';
-import 'package:swift_goal/feature/search/presentation/view/widgets/search_team_item.dart';
-
-import '../../../home/presentation/view/widgets/league_matches.dart';
+import 'package:swift_goal/feature/search/presentation/view/widgets/leagues_list_view.dart';
+import 'package:swift_goal/feature/search/presentation/view/widgets/matches_listview.dart';
+import 'package:swift_goal/feature/search/presentation/view/widgets/teams_list_view.dart';
 
 class SearchTab extends StatelessWidget {
   const SearchTab({Key? key}) : super(key: key);
@@ -16,9 +12,9 @@ class SearchTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 45),
-      child: DefaultTabController(
-        length: 5,
+      child: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -43,20 +39,23 @@ class SearchTab extends StatelessWidget {
               height: 10,
             ),
             const Divider(),
-            const Row(
-              children: [
-                SearchTabBar(),
-              ],
+             Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text("Matches",style: Theme.of(context).textTheme.headlineLarge,),
             ),
-            Expanded(
-              child: TabBarView(children: [
-                const Icon(Icons.save),
-               const MatchesTap(),
-                TeamsTap(),
-                const LeaguesTap(),
-                const Icon(Icons.ac_unit_outlined),
-              ]),
+           const MatchesListView(),
+            SizedBox(height: 30.h,),
+             Padding(
+              padding: const EdgeInsets.only(left:10),
+              child: Text("Teams",style: Theme.of(context).textTheme.headlineLarge,),
             ),
+           const TeamsListView(),
+            SizedBox(height: 30.h,),
+             Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text("Leagues",style: Theme.of(context).textTheme.headlineLarge,),
+            ),
+            const LeaguesListView(),
           ],
         ),
       ),

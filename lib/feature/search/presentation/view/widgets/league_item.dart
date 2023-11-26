@@ -15,7 +15,7 @@ class LeagueItem extends StatelessWidget {
           color: AppThemes.oBlack, borderRadius: BorderRadius.circular(8)),
       child: Row(
         children: [
-          Container(
+          SizedBox(
               width: 50.w,
               child: Image.asset("assets/images/PremierLeague_logo_test.png")),
           const Padding(

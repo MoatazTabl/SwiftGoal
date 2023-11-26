@@ -9,7 +9,10 @@ class MatchesTap extends StatelessWidget {
   Widget build(BuildContext context) {
     return  ListView.builder(
       itemBuilder: (context, index) {
-        return const LeagueMatchesItem();
+        return const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          child: LeagueMatchesItem(),
+        );
       },
       itemCount: 3,
     );

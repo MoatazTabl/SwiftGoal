@@ -10,7 +10,7 @@ class LineUpsTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       physics: const NeverScrollableScrollPhysics(),
-      child: Container(
+      child: SizedBox(
         height: 671.h,
         child: Stack(
           children: [

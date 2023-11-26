@@ -15,7 +15,7 @@ class SearchTeamItem extends StatelessWidget {
           color: AppThemes.oBlack, borderRadius: BorderRadius.circular(8)),
       child: Row(
         children: [
-          Container(
+          SizedBox(
               width: 50.w,
               child: Image.asset("assets/images/real_madrid_logo_test.png")),
           const Padding(

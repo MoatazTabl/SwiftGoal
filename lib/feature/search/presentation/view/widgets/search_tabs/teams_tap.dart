@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../search_team_item.dart';
 
 class TeamsTap extends StatelessWidget {
+  const TeamsTap({super.key});
+
 
   @override
   Widget build(BuildContext context) {
