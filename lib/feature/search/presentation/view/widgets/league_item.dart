@@ -8,41 +8,46 @@ class LeagueItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 70.h,
-      width: double.infinity,
-      decoration: BoxDecoration(
-          color: AppThemes.oBlack, borderRadius: BorderRadius.circular(8)),
-      child: Row(
-        children: [
-          SizedBox(
-              width: 50.w,
-              child: Image.asset("assets/images/PremierLeague_logo_test.png")),
-          const Padding(
-            padding: EdgeInsets.only(top: 8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Premier league"),
-                Row(
-                  children: [
-                    ImageIcon(AssetImage("assets/images/country_icon_test.png"),),
-                    Text("England"),
-                  ],
-                )
-              ],
+    return InkWell(
+      onTap: () {
+        // navigate to league details page
+      },
+      child: Container(
+        height: 70.h,
+        width: double.infinity,
+        decoration: BoxDecoration(
+            color: AppThemes.oBlack, borderRadius: BorderRadius.circular(8)),
+        child: Row(
+          children: [
+            SizedBox(
+                width: 50.w,
+                child: Image.asset("assets/images/PremierLeague_logo_test.png")),
+            const Padding(
+              padding: EdgeInsets.only(top: 8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Premier league"),
+                  Row(
+                    children: [
+                      ImageIcon(AssetImage("assets/images/country_icon_test.png"),),
+                      Text("England"),
+                    ],
+                  )
+                ],
+              ),
             ),
-          ),
-          const Spacer(),
-          IconButton(
-            iconSize: 20,
-            onPressed: () {},
-            icon: const Icon(
-              Icons.star,
-            ),
-            color: AppThemes.coral400,
-          )
-        ],
+            const Spacer(),
+            IconButton(
+              iconSize: 20,
+              onPressed: () {},
+              icon: const Icon(
+                Icons.star,
+              ),
+              color: AppThemes.coral400,
+            )
+          ],
+        ),
       ),
     );
   }
