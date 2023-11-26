@@ -72,6 +72,9 @@ class SearchTab extends StatelessWidget {
               ),
             ),
             const LeaguesListView(),
+            SizedBox(
+              height: 30.h,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
