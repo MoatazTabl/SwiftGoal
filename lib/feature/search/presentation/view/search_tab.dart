@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/custom_search_text_field.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/search_tab_bar.dart';
+import 'package:swift_goal/feature/search/presentation/view/widgets/search_tabs/leagues_tap.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/search_tabs/matches_tab.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/search_tabs/teams_tap.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/search_team_item.dart';
@@ -52,9 +53,7 @@ class SearchTab extends StatelessWidget {
                 const Icon(Icons.save),
                const MatchesTap(),
                 TeamsTap(),
-                const Icon(
-                  Icons.margin,
-                ),
+                const LeaguesTap(),
                 const Icon(Icons.ac_unit_outlined),
               ]),
             ),
