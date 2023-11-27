@@ -6,8 +6,6 @@ import 'package:swift_goal/feature/search/presentation/view/widgets/matches_list
 import 'package:swift_goal/feature/search/presentation/view/widgets/players_list_view.dart';
 import 'package:swift_goal/feature/search/presentation/view/widgets/teams_list_view.dart';
 
-import '../../../../core/app_theme.dart';
-
 class SearchTab extends StatelessWidget {
   const SearchTab({Key? key}) : super(key: key);
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:swift_goal/core/app_router.dart';
 
 import '../../../../../core/app_theme.dart';
 
@@ -10,7 +12,7 @@ class SearchTeamItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // navigate to team details page
+        GoRouter.of(context).push(AppRouter.kTeamDetailsView);
       },
       child: Container(
         height: 70.h,
