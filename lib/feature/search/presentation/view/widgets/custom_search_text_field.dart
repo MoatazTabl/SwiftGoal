@@ -15,6 +15,9 @@ class _CustomSearchTextFieldState extends State<CustomSearchTextField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onTapOutside: (event) {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       controller: textEditingController,
       onSubmitted: (value) {},
       onChanged: (value) {},

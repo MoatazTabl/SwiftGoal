@@ -65,7 +65,7 @@ class CustomPageHeader extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    const backgroundColor = Color(0xff2F283B);
+    const backgroundColor = AppThemes.neutral800;
     final scale = 1 - shrinkOffset / maxExtent;
     // final isReduced = shrinkOffset >= maxExtent * 0.12;
 

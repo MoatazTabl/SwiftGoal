@@ -12,7 +12,7 @@ class TeamDetailsViewHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 30),
       child: Container(
-        color: Color(0xff2F283B),
+        color: const Color(0xff2F283B),
         child: Column(
           children: [
             Row(
@@ -45,13 +45,13 @@ class TeamDetailsViewHeader extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 50.w,
                       height: 50.h,
                       child: Image.asset(
                           "assets/images/Manchester_City_FC_logo.png"),
                     ),
-                    Text("Manchester City"),
+                    const Text("Manchester City"),
                   ],
                 )
               ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:swift_goal/core/app_router.dart';
 
 import '../../../../../core/app_theme.dart';
 
@@ -10,7 +12,7 @@ class PlayerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigate to player details view
+        context.push(AppRouter.kPlayerDetailsView);
       },
       child: Container(
         height: 70.h,
